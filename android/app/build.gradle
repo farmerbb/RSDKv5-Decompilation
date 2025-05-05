@@ -10,7 +10,7 @@ android {
         prefab true
     }
     defaultConfig {
-        applicationId "org.rems.rsdkv5"
+        applicationId "org.rems.rsdkv5.preplus"
         minSdkVersion 21
         targetSdkVersion 33
         versionCode 100
@@ -21,7 +21,7 @@ android {
             retroRevision = project.property("RETRO_REVISION")
         externalNativeBuild {
             cmake {
-                arguments = ["-DANDROID_STL=c++_shared", "-DPLATFORM=Android", "-DRETRO_DISABLE_PLUS=$autobuildFlag", "-DRETRO_REVISION=$retroRevision"]
+                arguments = ["-DANDROID_STL=c++_shared", "-DPLATFORM=Android", "-DMANIA_PREPLUS=1", "-DRETRO_REVISION=1"]
             }
         }
         ndk {
